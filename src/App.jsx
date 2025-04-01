@@ -1,30 +1,21 @@
 import React, { useState } from "react";
-
-// Card component
-const Card = () => {
-  return (
-    <div className="bg-green-400 p-5 m-3 rounded-2xl shadow-2xl">
-      <h3>Hello</h3>
-      {/* <p>ds</p> */}
-      <p>This is a dynamically added card.</p>
-    </div>
-  );
-};
+import Card from "./component/card";
 
 // Parent component
+<Card />;
 const App = () => {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState([]); //hook
 
   const addCard = () => {
-    setCards((prevCards) => [...prevCards, <Card key={prevCards.length} />]);
+    setCards((prevCards) => [...prevCards, <Card key={prevCards.length} />]); //callback
   };
 
   return (
     <div>
-      <button className="bg-blue-500 rounded-lg p-3 m-3" onClick={addCard}>Add Card</button>
-      <div>
-        {cards}
-      </div>
+      <button className="bg-blue-500 rounded-lg p-3 m-3" onClick={addCard}>
+        Add Card
+      </button>
+      <div>{cards}</div>
     </div>
   );
 };
