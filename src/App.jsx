@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "./component/card";
 
 // Parent component
-<Card />;
+{/* <Card />; */}
 const App = () => {
   const [cards, setCards] = useState([]); //hook
 
